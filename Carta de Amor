@@ -1,0 +1,165 @@
+{
+  "name": "carta",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "ukruA",
+  "actions": [
+    {
+      "searchCommandBy": "2",
+      "valueToSearch": "",
+      "info": "0",
+      "storage": "1",
+      "varName": "store.Command",
+      "name": "Store Command Info"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "letter_uname",
+      "name": "Store Member Info"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "15",
+      "name": "Check Parameters"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "llt_sv",
+      "name": "Store Server Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Ingrese un mensaje corto para enviar al Destinatario/a.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content.length > 0 && author.id === user.id",
+      "max": "1",
+      "time": "60000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "17",
+      "storage2": "1",
+      "varName2": "msg",
+      "name": "Await Response Call Action"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "count": "2",
+      "type": "0",
+      "option": "0",
+      "msgid": "",
+      "Con0": "",
+      "Con1": "",
+      "Con2": "0",
+      "Con3": "",
+      "Con4": "",
+      "Con5": "0",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Delete Bulk Messages MOD"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💌 El mensaje ha sido enviado",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "title": "🔔Tilin ~ Tilin | Alguien dejo un mensaje.",
+      "author": "",
+      "color": "27F6F9",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://media.giphy.com/media/l0HU2sYgCZh3HiKnS/giphy.gif",
+      "storage": "1",
+      "varName": "love_embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "love_embed",
+      "message": "Es para ti ${mentionedUser}!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "love_embed",
+      "fieldName": "El contenido de la Carta es:",
+      "message": "```${tempVars(\"msg\")}```",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "love_embed",
+      "message": "Servidor ${tempVars(\"llt_sv\")}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "love_embed",
+      "channel": "2",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "🖐️ Tienes que etiquetar a un solo usuario.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "message": "⏰ หมดเวลาส่งข้อความโปรดใช้คำสั่งใหม่",
+      "name": "Edit Message"
+    }
+  ],
+  "_aliases": [
+    "ll",
+    "letter"
+  ],
+  "comType": "0"
+}
